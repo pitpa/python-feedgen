@@ -47,8 +47,3 @@ doc-latexpdf:
 
 publish:
 	twine upload dist/*
-
-test:
-	coverage run --source=feedgen -m unittest discover -s tests
-	flake8 $$(find setup.py tests feedgen -name '*.py')
-	bandit -r feedgen
