@@ -97,7 +97,6 @@ class PodcastEntryExtension(BaseEntryExtension):
         if self.__itunes_episode_type in ('full', 'trailer', 'bonus'):
             episode_type = xml_elem('{%s}episodeType' % ITUNES_NS, entry)
             episode_type.text = self.__itunes_episode_type
-        
         return entry
 
     def itunes_author(self, itunes_author=None):
